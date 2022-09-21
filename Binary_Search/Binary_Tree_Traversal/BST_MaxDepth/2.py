@@ -7,25 +7,21 @@ class Node:
 
 def maxDepth(root):
     stack = []
-    # once in the beginning
     if root != None:
-        stack.append((1,root))
-
+        stack.append((1, root))
     depth = 0
     while stack:
-        current_depth,root = stack.pop()
-        # each time traverse to new node
+        current_depth, root = stack.pop()
         if root != None:
-            # don't count None depth
             depth = max(current_depth, depth)
-            # first left
-            stack.append((current_depth+1,root.left))
-            # second right
-            stack.append((current_depth+1,root.right))
+            stack.append((current_depth + 1, root.left))
+            stack.append((current_depth + 1, root.right))
     return depth
+
 
 def maxDepth(root):
     return 1 + max((maxDepth(root.left, maxDepth(root.right)))) if root else 0
+
 
 if __name__ == '__main__':
     #   3
