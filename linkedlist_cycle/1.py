@@ -1,7 +1,7 @@
 class ListNode:
-    def __init__(self, x):
-        self.val = x
-        self.next = None
+    def __init__(self, value, next=None):
+        self.value = value
+        self.next = next
 
 
 def has_cycle1(head: ListNode) -> bool:
@@ -24,3 +24,15 @@ def has_cycle2(head: ListNode) -> bool:
         fast = fast.next.next
     return True
 
+
+first = ListNode(1)
+second = ListNode(2)
+third = ListNode(3)
+fourth = ListNode(4)
+
+first.next = second
+second.next = third
+third.next = fourth
+#fourth.next = first
+
+print(has_cycle1(first))
