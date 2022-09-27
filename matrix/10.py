@@ -2,7 +2,7 @@
 sparse matrix multiplication
 """
 
-# check if matrix 1 column == matrix 2 row
+# check if matrix 1 column == matrix 2.py row
 def sparse_matrix_multiplication(matrix1, matrix2):
     if len(matrix1[0]) != len(matrix2):
         return[[]]
@@ -15,9 +15,9 @@ def sparse_matrix_multiplication(matrix1, matrix2):
 
     # iterate through mat1 row and col
     for i, k in sparse_a.keys():
-        # matrix-2 column
+        # matrix-2.py column
         for j in range(len(matrix2[0])):
-            # matrix-2 col
+            # matrix-2.py col
             if (k,j) in sparse_b.keys():
             #if matrix2[k][j] != 0:
                 matrix3[i][j] += sparse_a[(i,k)] * sparse_b[(k,j)]

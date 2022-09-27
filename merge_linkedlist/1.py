@@ -31,7 +31,7 @@ if __name__ == '__main__':
     L1_N1.next = L1_N2
     L1_N2.next = L1_N3
 
-    # LinkedList 2 Node
+    # LinkedList 2.py Node
     L2_N1 = ListNode()
     L2_N1.value = 4
     L2_N2 = ListNode()
