@@ -16,7 +16,6 @@ def array_to_BT(arr):
         root.left = helper(left, p - 1)
         root.right = helper(p + 1, right)
         return root
-
     return helper(0, len(arr) - 1)
 
 
